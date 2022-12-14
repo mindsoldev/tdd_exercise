@@ -1,0 +1,6 @@
+*.class
+*.received.txt
+/settings/*.*
+.settings/*.*
+.classpath
+.project
