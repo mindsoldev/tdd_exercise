@@ -65,9 +65,13 @@ public class Lift {
 		
 		int closestFloor = Integer.MAX_VALUE;
 
-		HashMap<Integer, Integer> map = (HashMap<Integer, Integer>)requests.stream().collect(Collectors.toMap(x -> Math.abs(this.floor - x), x -> x));
-		Entry<Integer, Integer> entry = map.entrySet().iterator().next();
-		closestFloor = entry.getValue();
+		HashMap<Integer, Integer> map = (HashMap<Integer, Integer>)requests.stream()
+				.collect(Collectors.toMap(x -> Math.abs(this.floor - x), x -> x));
+		// ez kihasználja, hogy a HashMap a kulcsok (távolság) hash kódja szerint rendezett.
+//		Entry<Integer, Integer> entry = map.entrySet().iterator().next();
+//		closestFloor = entry.getValue();
+		// ez megjeresi a legkissebb távolságot.
+		closestFloor = Collections.min(map.entrySet(), Map.Entry.comparingByKey()).getValue();
 		
 //		for (Integer request : requests) {
 //			if (Math.abs(this.floor - request) < Math.abs(this.floor - closestFloor)) {
