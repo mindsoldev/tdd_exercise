@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<Hl>Rentals for <EM>fred</EM></Hl><P>
+The Hulk: 1.5<BR>
+<P>You owed is <EM>1.5</EM><P>
+On this rental you earned <EM>1</EM> frequent renter points<P>
+
+</body>
+</html>
