@@ -1,0 +1,4 @@
+Rental record for fred
+	The Hulk	1.5
+Amount owed is 1.5
+You earned 1 frequent renter points

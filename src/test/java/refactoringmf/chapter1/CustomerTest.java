@@ -76,4 +76,13 @@ public class CustomerTest {
 
         verify(toVerifySB.toString());
 	}
+
+    @Test
+    void testApprovalsHTML() throws Exception {
+    	StringBuilder toVerifySB = new StringBuilder();
+    	customer.addRental(new Rental(THE_HULK, 2));
+    	toVerifySB.append(customer.htmlStatement());
+    	
+    	verify(toVerifySB.toString());
+    }
 }
